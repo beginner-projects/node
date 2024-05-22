@@ -1,4 +1,4 @@
-const { Telegraf } = require("telegraf");
+const { Telegraf, Markup } = require("telegraf");
 
 // Use environment variable for the token
 const Token = "7077712875:AAGTunvFL7vuYHAlsqSg0tD6YvnvlFDZk_M";
@@ -13,9 +13,10 @@ bot.start((ctx) => {
     : ctx.from.first_name;
   ctx.reply(`Welcome ${username}`, {
     reply_markup: {
-      keyboard: [[{ text: "Launch App", web_app: { url: web_url } }]],
+      keyboard: [[{ text: "Launch App" }]],
       resize_keyboard: true, // Optional: Automatically resize the keyboard to fit the buttons
       one_time_keyboard: true, // Optional: Hide the keyboard after a button is pressed
+      inline_keyboard: [[{ text: "Launch App", url: web_url }]] // Inline button
     },
   });
 });
