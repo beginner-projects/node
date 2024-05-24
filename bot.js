@@ -5,7 +5,7 @@ const Token = "7077712875:AAGTunvFL7vuYHAlsqSg0tD6YvnvlFDZk_M";
 
 const bot = new Telegraf(Token);
 
-const web_url = "https://bot-game-eight.vercel.app";
+const web_url = "https://cointoss-45ylxhk7x-beginnerprojects1s-projects.vercel.app/";
 
 bot.start((ctx) => {
   const username = ctx.from.username
